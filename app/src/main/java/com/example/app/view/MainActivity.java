@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
     private void getJournalData() {
         // showProgressBar();
         //  checkIfDataPresentInLocalDB();
-        FetchJournalDataFromDB();
-      //  fetchJournalDataFromAPI();
+      //  FetchJournalDataFromDB();
+        fetchJournalDataFromAPI();
     }
 
 
@@ -74,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("TAG", "Data: " + response.body().getResponseObjectData());
                     ResponseObjectData responseObjectData = response.body().getResponseObjectData();
                     mArrayListJournalData = (ArrayList<Journal>) responseObjectData.getJournalList();
-                  //  setAdapterData(responseObjectData.getJournalList());
-                    saveJournalDataToDB();
+                    setAdapterData(responseObjectData.getJournalList());
+                  //  saveJournalDataToDB();
 
                     // SaveJournalData saveJournalData = new SaveJournalData();
                     //saveJournalData.execute();

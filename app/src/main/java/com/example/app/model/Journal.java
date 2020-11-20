@@ -8,16 +8,17 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-@Entity
+//@Entity
 public class Journal {
     private String id;
     private String journal;
     private String eissn;
     private String publication_date;
     private String article_type;
+  //  @TypeConverters(Convertors.class)
     private List<String> author_display;
 
-    @TypeConverters(Convertors.class)
+ //   @TypeConverters(Convertors.class)
     @SerializedName("abstract")
     private List<String> abstract_;
 
